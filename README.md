@@ -19,18 +19,21 @@
 <https://docs.ultralytics.com/quickstart/#install-ultralytics>
 
 命令：
-
+```
 pip install ultralytics
-
+```
 5. 测试  python-3.12.4
+```
 yolo train data=datasets/coco128/coco128.yaml model=datasets/yolov8s.pt epochs=10 
+```
 这里采用的是cpu训练，速度很慢。
 如何才能用gpu训练。
 
 我的笔记本性能比较差，因此采用云训练
 
-
+```
 yolo train data=D:\yolo\yolostudy\datasets\coco128\coco128.yaml model=datasets\yolov8s.pt epochs=10 
+```
 
 6. 云训练 python-3.10.0
 
@@ -43,10 +46,11 @@ yolo train data=D:\yolo\yolostudy\datasets\coco128\coco128.yaml model=datasets\y
 <https://docs.ultralytics.com/zh/yolov5/environments/aws_quickstart_tutorial/#step-3-connect-to-your-instance>
 
 这里从本地上传后执行命令
+```
 unzip yolov5.zip
 cd yolov5
 pip install -r requirements.txt
-
+```
 
 模型下载地址
 
@@ -54,8 +58,10 @@ pip install -r requirements.txt
 
 这里用v5s模型
 将模型和图片数据上传到服务器中
+```
 cd ~
 unzip datasets.zip
+```
 修改一下配置文件中的目录地址
 path: /root/datasets/coco128
 
@@ -63,21 +69,29 @@ path: /root/datasets/coco128
 
 
 训练命令
+```
 cd ~/yolov5
 python train.py --weights  ../datasets/yolov5s.pt --data ../datasets/coco128/coco128.yaml --epochs 50 --img 640
 
 python train.py --weights  D:\yolo\yolostudy\datasets\yolov5s.pt --data D:\yolo\yolostudy\datasets\coco128\coco128.yaml --epochs 50 --img 640
+```
 训练后的权重在runs中
 
 推测命令
+```
 python detect.py --weights runs/train/exp/weights/best.pt --source  ../datasets/coco128/images/train2017
 
 python detect.py --weights runs/train/exp/weights/best.pt --source  D:\yolo\yolostudy\datasets\datasets\coco128\images\train2017
+```
 
 用自己训练的权重去检测图片，效果很好
 
 导出命令
+
+```
 python export.py --weights runs/train/exp/weights/best.pt --include onnx engine --img 640 --device 0 --dynamic
+```
+
 将训练的权重导出成onnx格式，方便其他程序使用
 导出之前需要安装一个onnx库
 pip install onnx onnxruntime
@@ -97,19 +111,23 @@ https://h5.gaoshouyou.com/h5_game/dds/index.html
 
 需要改改数据路径就可以用
 训练
+```
 cd ~/yolov5
 python train.py --weights  ../datasets/yolov5s.pt --data ../datasets/dadishu/dadishu.yaml --epochs 50 --img 640
-
+```
 推测命令
+```
 python detect.py --weights runs/train/exp2/weights/best.pt --source  ../datasets/dadishu/images/train
 
 导出命令
+```
 python export.py --weights runs/train/exp2/weights/best.pt --include onnx engine --img 640 --device 0  --dynamic
-
+```
 效果very good
 
 8. 写个简单脚本
 先安装 
+```
 pip3 install pyautogui  onnx  gitpython onnxruntime ultralytics ipython
 
-
+```
