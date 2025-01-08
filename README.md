@@ -1,21 +1,25 @@
 # 安装
 
-1 官网最新版下载连接（不建议）
-https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe
+1 [官网最新版下载连接](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
 
-2 通过conda搭建环境 （建议，可以很方便的搭建多个版本的环境）
-https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
+
+2 [通过conda搭建环境](https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe)
+
 
 安装之后就能使用python和pip
 
-3. git客户端安装
-https://github.com/git-for-windows/git/releases/download/v2.47.0.windows.1/Git-2.47.0-64-bit.exe
+3. [git客户端安装](https://github.com/git-for-windows/git/releases/download/v2.47.0.windows.1/Git-2.47.0-64-bit.exe)
+
 
 
 4. 安装yolo环境
+
 官网教程：
-https://docs.ultralytics.com/quickstart/#install-ultralytics
+
+<https://docs.ultralytics.com/quickstart/#install-ultralytics>
+
 命令：
+
 pip install ultralytics
 
 5. 测试  python-3.12.4
@@ -29,20 +33,25 @@ yolo train data=datasets/coco128/coco128.yaml model=datasets/yolov8s.pt epochs=1
 yolo train data=D:\yolo\yolostudy\datasets\coco128\coco128.yaml model=datasets\yolov8s.pt epochs=10 
 
 6. 云训练 python-3.10.0
-https://lanyun.net/term.html
+
+<https://lanyun.net/term.html>
+
 注册登录后，现在会送50元代金券，可以用来搭建训练服务器
 
 云训练环境搭建教程，yolov5版本，这个版本可以在大漠工具中使用，方便测试效果
-https://docs.ultralytics.com/zh/yolov5/environments/aws_quickstart_tutorial/#step-3-connect-to-your-instance
+
+<https://docs.ultralytics.com/zh/yolov5/environments/aws_quickstart_tutorial/#step-3-connect-to-your-instance>
 
 这里从本地上传后执行命令
 unzip yolov5.zip
 cd yolov5
-pip install -r requirements.txt  -i https://pypi.tuna.tsinghua.edu.cn/simple/
+pip install -r requirements.txt
 
 
 模型下载地址
-https://github.com/ultralytics/yolov5/releases
+
+<https://github.com/ultralytics/yolov5/releases>
+
 这里用v5s模型
 将模型和图片数据上传到服务器中
 cd ~
@@ -71,7 +80,7 @@ python detect.py --weights runs/train/exp/weights/best.pt --source  D:\yolo\yolo
 python export.py --weights runs/train/exp/weights/best.pt --include onnx engine --img 640 --device 0 --dynamic
 将训练的权重导出成onnx格式，方便其他程序使用
 导出之前需要安装一个onnx库
-pip install onnx onnxruntime -i https://pypi.tuna.tsinghua.edu.cn/simple/
+pip install onnx onnxruntime
 
 测试下在本地的效果
 测试工具就用大漠工具，他需要的模型格式为onnx
@@ -79,7 +88,9 @@ pip install onnx onnxruntime -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
 
 7. 实战一下
+
 https://h5.gaoshouyou.com/h5_game/dds/index.html
+
 检测地鼠，然后控制鼠标去打
 需要准备图片素材，用大漠工具获得，但是不用大漠训练，因为本机没有gpu速度慢。
 将大漠标记好的标签文件夹复制到datasets中，压缩上传
