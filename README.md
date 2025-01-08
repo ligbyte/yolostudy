@@ -74,6 +74,8 @@ cd ~/yolov5
 python train.py --weights  ../datasets/yolov5s.pt --data ../datasets/coco128/coco128.yaml --epochs 50 --img 640
 
 python train.py --weights  D:\yolo\yolostudy\datasets\yolov5s.pt --data D:\yolo\yolostudy\datasets\coco128\coco128.yaml --epochs 50 --img 640
+
+python train.py --weights  /home/lime/yolo/yolostudy/datasets/yolov5s.pt --data /home/lime/yolo/yolostudy/datasets/coco128/coco128.yaml --epochs 50 --img 640
 ```
 训练后的权重在runs中
 

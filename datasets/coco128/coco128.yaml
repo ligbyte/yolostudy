@@ -1,4 +1,4 @@
-path: D:\yolo\yolostudy\datasets\coco128
+path: /home/lime/yolo/yolostudy/datasets/coco128
 train:
   - images/train2017
 val:
