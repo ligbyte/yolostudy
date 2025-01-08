@@ -18,7 +18,7 @@ https://docs.ultralytics.com/quickstart/#install-ultralytics
 命令：
 pip install ultralytics
 
-5. 测试
+5. 测试  python-3.12.4
 yolo train data=datasets/coco128/coco128.yaml model=datasets/yolov8s.pt epochs=10 
 这里采用的是cpu训练，速度很慢。
 如何才能用gpu训练。
@@ -28,7 +28,7 @@ yolo train data=datasets/coco128/coco128.yaml model=datasets/yolov8s.pt epochs=1
 
 yolo train data=D:\yolo\yolostudy\datasets\coco128\coco128.yaml model=datasets\yolov8s.pt epochs=10 
 
-6. 云训练
+6. 云训练 python-3.10.0
 https://lanyun.net/term.html
 注册登录后，现在会送50元代金券，可以用来搭建训练服务器
 
@@ -51,7 +51,7 @@ unzip datasets.zip
 path: /root/datasets/coco128
 
 
-python-3.10.0
+
 
 训练命令
 cd ~/yolov5
