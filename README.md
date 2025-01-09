@@ -84,6 +84,8 @@ python train.py --weights  /home/lime/yolo/yolostudy/datasets/yolov5s.pt --data 
 python detect.py --weights runs/train/exp/weights/best.pt --source  ../datasets/coco128/images/train2017
 
 python detect.py --weights runs/train/exp/weights/best.pt --source  D:\yolo\yolostudy\datasets\datasets\coco128\images\train2017
+
+python detect.py --weights runs/train/exp/weights/best.pt --source  /home/lime/yolo/yolostudy/datasets/coco128/images/train2017
 ```
 
 用自己训练的权重去检测图片，效果很好
